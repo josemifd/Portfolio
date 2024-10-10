@@ -1,0 +1,13 @@
+.icono-hab {
+    width: fit-content;
+    border-radius: 10px;
+    /* margin-bottom: 2vh; */
+    padding: 5px;
+    transition: transform 0.2s linear;
+    background-color: var(--color-skills);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.icono-hab:hover {
+    transform: scale(1.1);
+}

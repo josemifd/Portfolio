@@ -45,7 +45,7 @@
 .line {
     width: 1px;
     /* height: 100%; */
-    border-width: 3px;
+    border-width: 2px;
     border-style: solid;
     /* border-color: var(--color-primary); */
 }

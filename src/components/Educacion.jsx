@@ -1,7 +1,7 @@
 import "../CSS/Educacion.css"
 
 const Educacion = () => {
-    const experiencia = [
+    const educacion = [
         {
             title: "Grado en Ingeniería Informática",
             subtitle: "Universidad de Zaragoza",
@@ -22,12 +22,23 @@ const Educacion = () => {
             ],
             list: [
             ]
+        },
+        {
+            title: "Inglés B1",
+            subtitle: "Escuela Oficial de Idiomas",
+            years: "Oct. 2019",
+            description: [
+                "Actualmente me encuentro estudiando para obtener el B2."
+            ],
+            list: [
+            ]
         }
+
     ]
 
     return (
         <>
-            {experiencia.map((e, index) => (
+            {educacion.map((e, index) => (
                 <div key={index} className="ex-wrapper h-full flex my-5">
                     <div className="line"/>
                     <div className="ex-item">

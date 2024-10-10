@@ -5,26 +5,5 @@
     columns: 4;
     width: 100%;
     align-items: center;
-    font-size: 4rem;
-    
-    .icono-hab {
-        width: max-content;
-        margin-right: 1vw;
-        border-radius: 10px;
-        margin-bottom: 2vh;
-        padding: 20px;
-        transition: transform 0.2s linear;
-    }
-
-    .icono-hab:hover {
-        transform: scale(1.1);
-    }
-
-    .icono-img {
-        background-color: rgb(48, 48, 48);
-        border-radius: 5px;
-        opacity: 1;
-        padding: 5px;
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra */
-    }
+    font-size: 5rem;
 }
