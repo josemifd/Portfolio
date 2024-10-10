@@ -1,3 +1,8 @@
+/* Esta clase solo sirve para impedir el scroll */
+.no-scroll {
+    overflow: hidden;
+}
+
 .navbar {
     @media (max-width:940px) {
         display: none;
@@ -35,6 +40,11 @@
     }
 }
 
+.navlink-little {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 .navlink.active:hover {
     font-size: 1.75rem;
 }
@@ -46,9 +56,15 @@
         display: none;
     }
     position: fixed;
-    font-size: 2rem;
-    right: 5px;
-    z-index: 50000000000;
+    font-size: 2.25rem;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-primary);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra */
+
+    border-radius: 5px;
+    color: white;
+    z-index: 500000000000000;
 }
 
 .menu-button-clicked {
@@ -60,11 +76,17 @@
 }
 
 .menu-little {
-    display: none;
+    position: fixed;
+    top: -1000px;
+    left: -1000px;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    transition: all .5s linear ;
 }
 
 .menu-little-clicked {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -76,6 +98,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: all .2s ease ;
 
-    z-index: 5000000000;
+
+    z-index: 20;
 }

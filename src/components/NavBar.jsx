@@ -89,22 +89,40 @@ const NavBar = () => {
       </div>
 
       <nav className={`menu-little${clicked ? '-clicked' : ''}`}>
-        <a className={`navlink ${activeSection === "inicio" ? "active" : ""}`} href="#inicio">
+        <a 
+          className={`navlink-little ${activeSection === "inicio" ? "active" : ""}`} 
+          href="#inicio"
+          onClick={handleClick}>
           Inicio
         </a>
-        <a className={`navlink ${activeSection === "experiencia" ? "active" : ""}`} href="#experiencia">
+        <a 
+          className={`navlink-little ${activeSection === "experiencia" ? "active" : ""}`} 
+          href="#experiencia"
+          onClick={handleClick}>
           Experiencia
         </a>
-        <a className={`navlink ${activeSection === "proyectos" ? "active" : ""}`} href="#proyectos">
+        <a 
+          className={`navlink-little ${activeSection === "proyectos" ? "active" : ""}`} 
+          href="#proyectos"
+          onClick={handleClick}>
           Proyectos
         </a>
-        <a className={`navlink ${activeSection === "educacion" ? "active" : ""}`} href="#educacion">
+        <a 
+          className={`navlink-little ${activeSection === "educacion" ? "active" : ""}`} 
+          href="#educacion"
+          onClick={handleClick}>
           Educación
         </a>
-        <a className={`navlink ${activeSection === "habilidades" ? "active" : ""}`} href="#habilidades">
+        <a 
+          className={`navlink-little ${activeSection === "habilidades" ? "active" : ""}`} 
+          href="#habilidades"
+          onClick={handleClick}>
           Habilidades
         </a>
-        <a className={`navlink ${activeSection === "sobremi" ? "active" : ""}`} href="#sobremi">
+        <a 
+          className={`navlink-little ${activeSection === "sobremi" ? "active" : ""}`} 
+          href="#sobremi"
+          onClick={handleClick}>
           Sobre mí
         </a>
       </nav>
