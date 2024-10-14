@@ -8,12 +8,14 @@ const Habilidades = () => {
         "HTML",
         "CSS" ,
         "C++" ,
+        "Python",
         "Java",
         "Express",
         "MongoDB",
         "GitHub",
         "GitHub Actions",
         "OCaml",
+        "TailwindCSS"
     ]
 
     return (
