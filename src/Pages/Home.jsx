@@ -55,53 +55,51 @@ const Home = () => {
                 </div>
                 </div>
             </section>
-            <section id="experiencia" className="ex-section">
+            <section id="sobremi" className="sobremi">
+                <div className="sobremi-container">
+                    <img
+                        className="img-yo"
+                        src={yo}
+                    />
+                    <div className="presentacion">
+                        <h1> José Miguel Florentín Domingo </h1>
+                        <p className="mb-[10px]"> Actualmente soy estudiante de último curso en Ingeniería 
+                            Informática. </p> 
+                        <p className="mb-[10px]">
+                            Busco iniciar mi carrera profesional en un lugar donde poder aplicar
+                            mis conocimientos en proyectos y seguir aprendiendo al mismo tiempo.
+                        </p> 
+                        <p className="mb-[10px]">
+                            Me considero una persona resolutiva, con facilidad para 
+                            el trabajo en equipo y una gran disposición para 
+                            aprender.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            {/* <section id="experiencia" className="ex-section">
                 <div className="ex-container">
                     <h2> E X P E R I E N C I A </h2>
                     <Experiencia/>
                 </div>
-            </section>
+            </section> */}
             <section id="proyectos" className="section">
-                <div className="ex-container">
-                    <h2> P R O Y E C T O S </h2>
+                <div className="ex-container mt-[5vh]">
+                    <h2> PROYECTOS </h2>
                     <Proyectos/>
                 </div>
             </section>
             <section id="educacion" className="section">
-                <div className="ex-container">
-                    <h2> E D U C A C I Ó N </h2>
+                <div className="ex-container mt-[5vh]">
+                    <h2> EDUCACIÓN </h2>
                     <Educacion/>
                 </div>
 
             </section>
-            <section id="habilidades" className="section">
-                <div className="w-full">
-                    <h2> H A B I L I D A D E S </h2>
+            <section id="habilidades" className="section mb-[20vh]">
+                <div className="w-full mt-[5vh]">
+                    <h2> HABILIDADES </h2>
                     <Habilidades/>
-                </div>
-            </section>
-            <section id="sobremi" className="section">
-                <div className="w-full">
-                <h2> S O B R E &nbsp; M Í</h2>
-                <div className="sobremi-container">
-                <img
-                  className="img-yo"
-                  src={yo}
-                />
-                <div className="presentacion">
-                    <h1> José Miguel Florentín Domingo </h1>
-                    <p> Actualmente soy estudiante de último curso en Ingeniería 
-                        Informática. <br/> <br/>
-                        
-                        Busco iniciar mi carrera profesional realizando prácticas
-                        y Trabajo Fin de Grado en una empresa. <br/> <br/>
-                        
-                        Me considero una persona resolutiva, con facilidad para 
-                        el trabajo en equipo y una gran disposición para 
-                        aprender.
-                    </p>
-                </div>
-                </div>
                 </div>
             </section>
         </div>

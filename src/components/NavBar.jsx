@@ -1,133 +1,88 @@
-import { useState, useEffect } from "react"
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import "../CSS/NavBar.css"
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link} from "@nextui-org/react";
+import {NavbarMenuToggle, NavbarMenuItem, NavbarMenu, Button} from "@nextui-org/react";
 
-const NavBar = () => {
+import { useEffect, useState } from "react";
 
-    // Para el NavBar grande
-    const [activeSection, setActiveSection] = useState("inicio");
+const NavBarComponent = ({page}) => {
 
-    useEffect(() => {
-        // Miramos todas las secciones de la página
-        const sections = document.querySelectorAll("section");
-  
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute("id");
-                        setActiveSection(id); // Actualizamos la sección activa cuando el usuario llega a una nueva sección
-                    }
-                });
-            },
-            { threshold: 0.8 } // El 70% de la sección debe ser visible para activarse
-        );
-  
-        sections.forEach((section) => {
-            observer.observe(section);
-        });
-  
-        return () => {
-            sections.forEach((section) => observer.unobserve(section));
-        };
-    }, []);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Para el NavBar pequeño
-    const [clicked, setClicked] = useState(false)
+  const [bold, setBold] = useState("")
 
-    const handleClick = () => {
-      setClicked(!clicked)
-    }
-  
-    // Añadir o quitar la clase 'no-scroll' al body solo cuando el menu-little está activo
-    useEffect(() => {
-      if (clicked) {
-        document.body.classList.add('no-scroll');
-      } else {
-        document.body.classList.remove('no-scroll');
-      }
-  
-      // Limpieza: asegurar que la clase se quite si el componente se desmonta
-      return () => {
-        document.body.classList.remove('no-scroll');
-      };
-    }, [clicked]);
-  
-    
-    return (
-      <>
-      <nav className="navbar">
-        <a className={`navlink ${activeSection === "inicio" ? "active" : ""}`} href="#inicio">
-          Inicio <hr />
-        </a>
-        <a className={`navlink ${activeSection === "experiencia" ? "active" : ""}`} href="#experiencia">
-          Experiencia <hr />
-        </a>
-        <a className={`navlink ${activeSection === "proyectos" ? "active" : ""}`} href="#proyectos">
-          Proyectos <hr />
-        </a>
-        <a className={`navlink ${activeSection === "educacion" ? "active" : ""}`} href="#educacion">
-          Educación <hr />
-        </a>
-        <a className={`navlink ${activeSection === "habilidades" ? "active" : ""}`} href="#habilidades">
-          Habilidades <hr />
-        </a>
-        <a className={`navlink ${activeSection === "sobremi" ? "active" : ""}`} href="#sobremi">
-          Sobre mí <hr />
-        </a>
-      </nav>
+  return (
+    <Navbar
+      isBordered
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      className="w-[100vw]"
+    >
+      <NavbarContent className="sm:hidden flex" justify="center">
+        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
+      </NavbarContent>
 
-      <div className="navbar-little">
-        <a className={`menu-button${clicked ? '-clicked' : ''}`}
-           onClick={handleClick}>
-            <AiOutlineMenu/>
-        </a>
-        <a className={`close-button${clicked ? '-clicked' : ''}`}
-           onClick={handleClick}>
-            <AiOutlineClose/>
-        </a>
-      </div>
+      <NavbarContent className="hidden sm:flex gap-4 justify-center" 
+        style={{ justifyContent: "center",}}
+      >
+        <NavbarItem isActive={bold == "menu"}>
+          <Link 
+            href="#proyectos"
+            className="text-white text-[1.25rem]" aria-current="page">
+            Proyectos
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive={bold == "crear"}>
+          <Link 
+            href="#educacion"
+            className="text-white text-[1.25rem]" 
+            aria-current="page"
+          >
+            Educación
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive={bold == "talleres"}>
+          <Link 
+            href="#habilidades"
+            className="text-white text-[1.25rem]" 
+            aria-current="page">
+            Habilidades
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
 
-      <nav className={`menu-little${clicked ? '-clicked' : ''}`}>
-        <a 
-          className={`navlink-little ${activeSection === "inicio" ? "active" : ""}`} 
-          href="#inicio"
-          onClick={handleClick}>
-          Inicio
-        </a>
-        <a 
-          className={`navlink-little ${activeSection === "experiencia" ? "active" : ""}`} 
-          href="#experiencia"
-          onClick={handleClick}>
-          Experiencia
-        </a>
-        <a 
-          className={`navlink-little ${activeSection === "proyectos" ? "active" : ""}`} 
-          href="#proyectos"
-          onClick={handleClick}>
-          Proyectos
-        </a>
-        <a 
-          className={`navlink-little ${activeSection === "educacion" ? "active" : ""}`} 
-          href="#educacion"
-          onClick={handleClick}>
-          Educación
-        </a>
-        <a 
-          className={`navlink-little ${activeSection === "habilidades" ? "active" : ""}`} 
-          href="#habilidades"
-          onClick={handleClick}>
-          Habilidades
-        </a>
-        <a 
-          className={`navlink-little ${activeSection === "sobremi" ? "active" : ""}`} 
-          href="#sobremi"
-          onClick={handleClick}>
-          Sobre mí
-        </a>
-      </nav>
-      </>
-    )
+      <NavbarMenu>
+        <NavbarMenuItem>
+          <Link
+            className="w-full text-white"
+            href="#proyectos"
+            onClick={() => setIsMenuOpen(false)}
+            size="lg"
+          >
+            Proyectos            
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link
+            className="w-full text-white"
+            href="#educacion"
+            onClick={() => setIsMenuOpen(false)}
+            size="lg"
+          >
+            Educación            
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link
+            className="w-full text-white"
+            href="#habilidades"
+            onClick={() => setIsMenuOpen(false)}
+            size="lg"
+          >
+            Habilidades            
+          </Link>
+        </NavbarMenuItem>
+      </NavbarMenu>
+    </Navbar>
+  );
 }
 
-export default NavBar
+export default NavBarComponent

@@ -56,13 +56,10 @@ body, html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 40vh;
     }
     @media (max-width: 1420px) {
         margin-left: 0vw;
-        margin-top: 20vh;
     }
-
 }
 
 h1 {

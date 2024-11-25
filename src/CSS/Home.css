@@ -6,7 +6,7 @@
 
 .inicio {
     width: 70%;
-    height: 100vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     text-align: start;
@@ -75,6 +75,19 @@
 
 }
 
+.sobremi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+
+    height: fit-content;
+    width: 100vw;
+
+    background-color: var(--color-background);
+}
+
+
 
 .titulo {
     align-items: center;
@@ -91,13 +104,22 @@
 
 .sobremi-container {
     align-items: center;
-    margin-top: 5vh;
-    margin-bottom: 20vh;
     display: flex;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    justify-content: center;
 
     @media (max-width: 700px) {
         flex-direction: column;
     }
+
+    @media (min-width: 940px) {
+        width: 50%;
+    }
+    @media (max-width: 940px) {
+        width: 90%;
+    }
+
 }
 
 .img-yo {
@@ -110,6 +132,7 @@
     align-items: center;
     text-align: start;
     margin-left: 2vw;
+    font-size: 1.1rem;
 }
 
 .iconos {
