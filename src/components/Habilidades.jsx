@@ -15,7 +15,9 @@ const Habilidades = () => {
         "GitHub",
         "GitHub Actions",
         "OCaml",
-        "TailwindCSS"
+        "TailwindCSS",
+        "Supabase",
+        "Ionic"
     ]
 
     return (

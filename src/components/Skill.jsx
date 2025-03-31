@@ -1,7 +1,7 @@
-import { IoLogoJavascript } from "react-icons/io5";
+import { IoLogoIonic, IoLogoJavascript } from "react-icons/io5";
 import { SiCplusplus, SiOcaml, SiExpress, SiMongodb, SiGithubactions } from "react-icons/si";
 import { FaPython, FaReact, FaJava, FaHtml5, FaCss3Alt, FaGithub } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { RiSupabaseFill, RiTailwindCssFill } from "react-icons/ri";
 import { Tooltip } from "@nextui-org/react";
 import "../CSS/Skill.css"
 
@@ -20,7 +20,8 @@ const Skill = ({name}) => {
         { logo: <SiOcaml className="text-ocaml"/>, alt: "OCaml" },
         { logo: <SiGithubactions className="text-c++"/>, alt: "GitHub Actions" },
         { logo: <RiTailwindCssFill className="text-[#37bcf7]"/>, alt: "TailwindCSS" },
-
+        { logo: <RiSupabaseFill className="text-[#3ecd89]"/>, alt: "Supabase" },
+        { logo: <IoLogoIonic className="text-[#176bff]"/>, alt: "Ionic" },
     ]
 
     // Buscar la habilidad que coincida con el 'alt' proporcionado
