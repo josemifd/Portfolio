@@ -7,7 +7,26 @@ const NavBarComponent = ({page}) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [bold, setBold] = useState("")
+  const [bold, setBold] = useState("");
+
+  const menuItems = [
+    {
+      name: "Proyectos",
+      href: "#proyectos"
+    },
+    {
+      name: "Experiencia",
+      href: "#experiencia"
+    },
+    {
+      name: "Educación",
+      href: "#educacion"
+    },
+    {
+      name: "Habilidades",
+      href: "#habilidades"
+    },
+  ];
 
   return (
     <Navbar
@@ -20,66 +39,32 @@ const NavBarComponent = ({page}) => {
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4 justify-center" 
+      <NavbarContent 
+        className="hidden sm:flex gap-4 justify-center" 
         style={{ justifyContent: "center",}}
       >
-        <NavbarItem isActive={bold == "menu"}>
-          <Link 
-            href="#proyectos"
-            className="text-white text-[1.25rem]" aria-current="page">
-            Proyectos
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={bold == "crear"}>
-          <Link 
-            href="#educacion"
-            className="text-white text-[1.25rem]" 
-            aria-current="page"
-          >
-            Educación
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive={bold == "talleres"}>
-          <Link 
-            href="#habilidades"
-            className="text-white text-[1.25rem]" 
-            aria-current="page">
-            Habilidades
-          </Link>
-        </NavbarItem>
+        {menuItems.map((m, idx) => (
+          <NavbarItem>
+            <Link href={m.href} className="text-white text-[1.25rem]" aria-current="page">
+              {m.name}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
 
       <NavbarMenu>
-        <NavbarMenuItem>
-          <Link
-            className="w-full text-white"
-            href="#proyectos"
-            onClick={() => setIsMenuOpen(false)}
-            size="lg"
-          >
-            Proyectos            
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link
-            className="w-full text-white"
-            href="#educacion"
-            onClick={() => setIsMenuOpen(false)}
-            size="lg"
-          >
-            Educación            
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link
-            className="w-full text-white"
-            href="#habilidades"
-            onClick={() => setIsMenuOpen(false)}
-            size="lg"
-          >
-            Habilidades            
-          </Link>
-        </NavbarMenuItem>
+        {menuItems.map((m, idx) => (
+          <NavbarMenuItem>
+            <Link
+              className="w-full text-white"
+              href={m.href}
+              onClick={() => setIsMenuOpen(false)}
+              size="lg"
+            >
+              {m.name}
+            </Link>
+          </NavbarMenuItem>
+        ))}
       </NavbarMenu>
     </Navbar>
   );
