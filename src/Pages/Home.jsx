@@ -63,16 +63,20 @@ const Home = () => {
                     />
                     <div className="presentacion">
                         <h1> José Miguel Florentín Domingo </h1>
-                        <p className="mb-[10px]"> Actualmente soy estudiante de último curso en Ingeniería 
-                            Informática. </p> 
-                        <p className="mb-[10px]">
-                            Busco iniciar mi carrera profesional en un lugar donde poder aplicar
-                            mis conocimientos en proyectos y seguir aprendiendo al mismo tiempo.
+                        <p className="mb-[10px]"> 
+                            Soy un desarrollador que destaca por su capacidad de adaptación,
+                            trabajo y ambición.
                         </p> 
                         <p className="mb-[10px]">
-                            Me considero una persona resolutiva, con facilidad para 
-                            el trabajo en equipo y una gran disposición para 
-                            aprender.
+                            Disfruto y colaboro para tener un buen ambiente de trabajo en equipo 
+                            y procuro sacar lo mejor de mí cuando lo hago individualmente.
+                        </p> 
+                        <p className="mb-[10px]">
+                            Me encantan las oportunidades que me permitan seguir creciendo como 
+                            persona y como trabajador.
+                        </p>
+                        <p className="mb-[10px]">
+                            ¿Algo sobre mí? Me encanta el deporte, la montaña y viajar.
                         </p>
                     </div>
                 </div>
@@ -89,12 +93,17 @@ const Home = () => {
                     <Proyectos/>
                 </div>
             </section>
+            <section id="experiencia" className="section">
+                <div className="ex-container mt-[5vh]">
+                    <h2> EXPERIENCIA </h2>
+                    <Experiencia/>
+                </div>
+            </section>
             <section id="educacion" className="section">
                 <div className="ex-container mt-[5vh]">
                     <h2> EDUCACIÓN </h2>
                     <Educacion/>
                 </div>
-
             </section>
             <section id="habilidades" className="section mb-[20vh]">
                 <div className="w-full mt-[5vh]">

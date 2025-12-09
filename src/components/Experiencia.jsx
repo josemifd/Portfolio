@@ -4,26 +4,31 @@ const Experiencia = () => {
 
     const experiencia = [
         {
+            title: "Desarrollador Web Full-Stack",
+            subtitle: "Fútbol Emotion",
+            years: "Ago. 2025 - actualidad",
+            description: [
+                "Mantenimiento, mejora y desarrollo de soluciones web para una plataforma de e-commerce. Participo en proyectos que mejoran la calidad de la web centrado en un rendimiento óptimo del backend para dar una buena experiencia de usuario.",
+            ],
+            list: []
+        },
+        {
             title: "Viking Brothers Gym Web",
             subtitle: "Freelance",
-            years: "2024-actualidad",
+            years: "2024 - actualidad",
             description: [
                 "Propuse a los dueños de mi gimnasio realizar la página web de su negocio. Mantengo la página actualizada para que dispongan de un medio de información y captación de clientes.",
             ],
-            list: [
-            ]
+            list: []
         },
         {
-            title: "Universidad de Zaragoza",
-            subtitle: "Grado en Ingeniería Informática",
-            years: "2021-2025",
+            title: "Prácticas en ElectrUZherapy",
+            subtitle: "Universidad de Zaragoza",
+            years: "Feb. 2025 - Jul. 2025",
             description: [
+                "En mi TFG, trabajé en colaboración con el departamento de Fisioterapia de la Universidad de Zaragoza. Construí una aplicación docente multiplataforma para la simulación de dispositivos de electroterapia."
             ],
-            list: [
-                "Mejor expediente académico 1er curso",
-                "8 Matrículas de Honor",
-                "Media expediente: 8.50"
-            ]
+            list: []
         }
     ]
 

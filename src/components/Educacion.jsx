@@ -5,12 +5,21 @@ const Educacion = () => {
         {
             title: "Grado en Ingeniería Informática",
             subtitle: "Universidad de Zaragoza",
-            years: "Sept. 2021 - actualidad",
+            years: "Sept. 2021 - Jul. 2025",
             description: [],
             list: [
                 "Mejor expediente académico 1er curso",
-                "8 Matrículas de Honor",
-                "Media expediente: 8.50"
+                "10 Matrículas de Honor",
+                "Media expediente: 8.44"
+            ]
+        },
+        {
+            title: "Inglés B2",
+            subtitle: "Cambridge English",
+            years: "Dic. 2025",
+            description: [
+            ],
+            list: [
             ]
         },
         {
@@ -23,16 +32,6 @@ const Educacion = () => {
             list: [
             ]
         },
-        {
-            title: "Inglés B1",
-            subtitle: "Escuela Oficial de Idiomas",
-            years: "Oct. 2019",
-            description: [
-                "Actualmente me encuentro estudiando para obtener el B2."
-            ],
-            list: [
-            ]
-        }
 
     ]
 
