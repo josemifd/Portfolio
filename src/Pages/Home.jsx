@@ -15,7 +15,7 @@ const Home = () => {
             <section id="inicio" className="inicio">
                 <div className="inicio-container">
                 <div className="titulo w-full">
-                    <h1> <span className="des">Desarrollador</span> y <br/>Estudiante </h1>
+                    <h1> <span className="des">Desarrollador</span> <br/>Full-Stack</h1>
                     <h3 className="opacity-70"> José Miguel Florentín Domingo </h3>
                 </div>
                 <div className="iconos space-x-3">
