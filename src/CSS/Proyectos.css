@@ -1,4 +1,8 @@
 .img-proy {
+    width: max-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
     position: relative;
     overflow: hidden; /* Para asegurar que el pseudo-elemento no sobresalga */
     cursor: pointer;

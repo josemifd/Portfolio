@@ -92,11 +92,11 @@ const Proyectos = () => {
     ]
 
     return (
-      <div className="flex flex-col sm:flex-row sm:flex-wrap items-center gap-5 justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-5 justify-items-center">
         {proyectos.map((p, idx) => (
           <div key={idx} className="img-proy" onClick={() => {setProyecto(p); onOpen()}}>
             <img 
-              className="img max-w-[400px] sm:w-[30vw] w-[60vw]"
+              className="img max-w-[600px] sm:w-[30vw] w-[60vw]"
               src={p.img}
             />
             <p className="img-text"> + </p>

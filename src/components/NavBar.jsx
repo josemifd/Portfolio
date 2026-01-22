@@ -33,7 +33,7 @@ const NavBarComponent = ({page}) => {
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="w-[100vw]"
+      className="w-full"
     >
       <NavbarContent className="sm:hidden flex" justify="center">
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />

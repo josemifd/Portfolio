@@ -13,6 +13,16 @@ const Experiencia = () => {
             list: []
         },
         {
+            title: "Asesor técnico IT",
+            subtitle: "ElectrUZherapy - Universidad de Zaragoza",
+            years: "Feb. 2025 - actualidad",
+            description: [
+                "En mi TFG, trabajé en colaboración con el departamento de Fisioterapia de la Universidad de Zaragoza. Construí una aplicación docente multiplataforma para la simulación de dispositivos de electroterapia.",
+                "En la actualidad, continúo colaborando como asesor, proporcionando mi experiencia a la vez que la adquiero."
+            ],
+            list: []
+        },
+        {
             title: "Viking Brothers Gym Web",
             subtitle: "Freelance",
             years: "2024 - actualidad",
@@ -21,15 +31,6 @@ const Experiencia = () => {
             ],
             list: []
         },
-        {
-            title: "Prácticas en ElectrUZherapy",
-            subtitle: "Universidad de Zaragoza",
-            years: "Feb. 2025 - Jul. 2025",
-            description: [
-                "En mi TFG, trabajé en colaboración con el departamento de Fisioterapia de la Universidad de Zaragoza. Construí una aplicación docente multiplataforma para la simulación de dispositivos de electroterapia."
-            ],
-            list: []
-        }
     ]
 
     return (

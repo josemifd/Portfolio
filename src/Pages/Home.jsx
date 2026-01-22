@@ -41,10 +41,10 @@ const Home = () => {
                         className="icon transition-all duration-1000 text-lg font-bold" 
                         color="primary"
                         onClick={() => {
-                        const link = document.createElement('a');
-                        link.href = 'Jose_Miguel_Florentin_CV.pdf';  // Ruta del archivo PDF
-                        link.download = 'Jose_Miguel_Florentin_CV.pdf';  // Nombre del archivo a descargar
-                        link.click();  // Forzar la descarga
+                            const link = document.createElement('a');
+                            link.href = 'Jose_Miguel_Florentin_CV.pdf';  // Ruta del archivo PDF
+                            link.download = 'Jose_Miguel_Florentin_CV.pdf';  // Nombre del archivo a descargar
+                            link.click();  // Forzar la descarga
                         }}
                     >
                         <span> 
